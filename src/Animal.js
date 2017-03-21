@@ -5,15 +5,22 @@
 
   window.zoo.Animal = class Animal {
     constructor(name, dateofBirth) {
+      if(!(name instanceof String)) {
+        throw new TypeError('not a valid name');
+      }
       this.name = name;
+      this.dob = dateofBirth;
+
 
       if ( ! (dateofBirth instanceof Date) ) {
         dateofBirth = new Date();
       }
-      this.dob = dateofBirth;
+      if(dateofBirth instanceof Date)
+      throw new TypeError('enter a real date of birth');
     }
+  
 
-    ageInYears() {
+    getAge() {
       let now = new Date();
       let age = (now.getFullYear() - this.dob.getFullYear());
       return age;

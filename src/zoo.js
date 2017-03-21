@@ -1,15 +1,25 @@
 (function() {
   'use strict';
 
+  window.zoo = window.zoo || {};
+
+
   let Animal = window.zoo.Animal;
   let Wombat = window.zoo.Wombat;
   let Platypus = window.zoo.Platypus;
   let currentDate = Date.now();
 
-  let timothy = new Animal('timothy', new Date('1/1/1980'), new Date());
+  // try {
+  //   let testing = new Platypus('test');
+  //   console.log(Testing);
+  // } catch(err) {
+  //   console.warn('SAD',err);
+  // }
+
+  let timothy = new Wombat('timothy', new Date('1/1/1980'));
   timothy.changeWhatIAmCalled('cassandra');
   console.log(timothy.name);
-  let allan = new Animal('allan');
+  let allan = new Platypus('allan');
   allan.changeWhatIAmCalled('Jackson', new Date('1/1/2006'));
   console.log(allan.name);
 
