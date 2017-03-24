@@ -9,12 +9,12 @@
   let Platypus = window.zoo.Platypus;
   let currentDate = Date.now();
 
-  // try {
-  //   let testing = new Platypus('test');
-  //   console.log(Testing);
-  // } catch(err) {
-  //   console.warn('SAD',err);
-  // }
+  try {
+    let testing = new Platypus('test');
+    console.log(Testing);
+  } catch(err) {
+    console.warn('SAD',err);
+  }
 
   let timothy = new Wombat('timothy', new Date('1/1/1980'));
   timothy.changeWhatIAmCalled('cassandra');
@@ -27,8 +27,7 @@
 
   let webbedFeetLength = 20;
   let clawLength = 15;
-  let species1 = 'Vombatus';
-  let species2 = 'Echidna';
+
 
 
 }());

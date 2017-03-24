@@ -12,17 +12,22 @@
       this.dob = dateofBirth;
 
 
-      if ( ! (dateofBirth instanceof Date) ) {
-        dateofBirth = new Date();
+      if (typeof newName !== 'string') {
+        throw new TypeError('enter a real name');
       }
-      if(dateofBirth instanceof Date)
-      throw new TypeError('enter a real date of birth');
+      this.name = newName;
     }
-  
+
 
     getAge() {
-      let now = new Date();
-      let age = (now.getFullYear() - this.dob.getFullYear());
+      let birthYear = this.dob.getFullYear();
+      if (birthYear < 1930 || birthYear > 2017); {
+        throw new Error('birthday must be between 1930 and 2017');
+      }
+      let currentYear = new Date();
+      let year = currentYear.getFullYear();
+
+      let age = year - birthYear;
       return age;
     }
 
