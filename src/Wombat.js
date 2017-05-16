@@ -38,7 +38,7 @@
 
 
     toString() {
-      return this.name + ' is a ' + this.species + ' born on ' + this.dateOfBirth + '!';
+      return this.name + ' is a ' + this.constructor.name + ' born on ' + this.dateOfBirth + '!';
     }
 
     run(duration) {
